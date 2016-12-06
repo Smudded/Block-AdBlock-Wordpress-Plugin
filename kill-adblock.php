@@ -3,7 +3,7 @@
 Plugin Name: Block AdBlock
 Description: Block AdBlock
 Author: Ibrahim Mohamed Abotaleb
-Version: 1.2
+Version: 1.3
 Author URI: https://mrkindy.com/
 Text Domain: kill-adblock
 Domain Path: /languages

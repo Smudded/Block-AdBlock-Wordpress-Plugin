@@ -20,6 +20,7 @@ add_action('admin_menu', 'kill_adblock_create_menu');
 function register_kill_adblock_settings() {
 	//register our settings
 	register_setting( 'kill-adblock-settings-group', 'kill_adBlock_status' );
+	register_setting( 'kill-adblock-settings-group', 'kill_adBlock_random_class_name' );
 	register_setting( 'kill-adblock-settings-group', 'kill_adBlock_message' );
 	register_setting( 'kill-adblock-settings-group', 'kill_adBlock_message_delay' );
 	register_setting( 'kill-adblock-settings-group', 'kill_adBlock_close_btn' );
@@ -45,6 +46,15 @@ function kill_adblock_settings_page() {
                 <fieldset><legend class="screen-reader-text"><span><?php _e( 'Kill AdBlock Status', 'kill-adblock' )?></span></legend>
                 <label title="<?php _e( 'Enable', 'kill-adblock' )?>"><input type="radio" name="kill_adBlock_status" value="1" <?php if(esc_attr( get_option('kill_adBlock_status') ) == 1 ){ ?> checked="checked"<?php }?>> <?php _e( 'Enable', 'kill-adblock' )?></label><br>
                 <label title="<?php _e( 'Disable', 'kill-adblock' )?>"><input type="radio" name="kill_adBlock_status" value="0" <?php if(esc_attr( get_option('kill_adBlock_status') ) == 0 ){ ?> checked="checked"<?php }?>> <?php _e( 'Disable', 'kill-adblock' )?></label><br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr valign="top">
+            <th scope="row"><?php _e( 'Use Random Class name', 'kill-adblock' )?></th>
+            <td>
+                <fieldset><legend class="screen-reader-text"><span><?php _e( 'Use Random Class name', 'kill-adblock' )?></span></legend>
+                <label title="<?php _e( 'Enable', 'kill-adblock' )?>"><input type="radio" name="kill_adBlock_random_class_name" value="1" <?php if(esc_attr( get_option('kill_adBlock_random_class_name') ) == 1 ){ ?> checked="checked"<?php }?>> <?php _e( 'Enable', 'kill-adblock' )?></label><br>
+                <label title="<?php _e( 'Disable', 'kill-adblock' )?>"><input type="radio" name="kill_adBlock_random_class_name" value="0" <?php if(esc_attr( get_option('kill_adBlock_random_class_name') ) == 0 ){ ?> checked="checked"<?php }?>> <?php _e( 'Disable', 'kill-adblock' )?></label><br>
                 </fieldset>
             </td>
         </tr>
